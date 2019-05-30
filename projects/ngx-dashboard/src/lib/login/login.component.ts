@@ -14,7 +14,9 @@ export class LoginComponent {
   @Output() loginSubmitted = new EventEmitter();
 
   onSubmit() {
-    this.loginSubmitted.emit(this.user);
+    const user = this.user;
+
+    this.loginSubmitted.emit(user);
   }
 }
 
