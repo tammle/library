@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-dashboard": [
+        "dist/ngx-dashboard"
+      ],
+      "ngx-dashboard/*": [
+        "dist/ngx-dashboard/*"
+      ]
+    }
   }
 }

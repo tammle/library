@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -84,6 +85,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -128,6 +130,41 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "NgxDashboard": {
+      "root": "projects/ngx-dashboard",
+      "sourceRoot": "projects/ngx-dashboard/src",
+      "projectType": "library",
+      "prefix": "NgxDashboard",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-dashboard/tsconfig.lib.json",
+            "project": "projects/ngx-dashboard/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-dashboard/src/test.ts",
+            "tsConfig": "projects/ngx-dashboard/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-dashboard/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-dashboard/tsconfig.lib.json",
+              "projects/ngx-dashboard/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
