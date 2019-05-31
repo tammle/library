@@ -75,7 +75,7 @@ Callback `loginSubmitted` provided with `User` model as argument, use this to ha
 ### Build
 The src files for the library lives under projects/ngx-dashboard/src/lib directory. 
 
-`ng build NgxDashboard`
+`ng build NgxDashboardTammle`
 
 ### Publish
 Change your terminal working directory to /dist/ngx-dashboard. Then run:

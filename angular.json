@@ -137,7 +137,7 @@
         }
       }
     },
-    "NgxDashboard": {
+    "NgxDashboardTammle": {
       "root": "projects/ngx-dashboard",
       "sourceRoot": "projects/ngx-dashboard/src",
       "projectType": "library",
