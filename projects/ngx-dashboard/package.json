@@ -2,6 +2,7 @@
   "name": "ngx-dashboard-tammle",
   "version": "0.0.4",
   "author": "Tam Minh Le",
+  "description": "Providing components to build basic dashboard layout",
   "repository": {
     "type": "git",
     "url": "https://github.com/tammle/library"
