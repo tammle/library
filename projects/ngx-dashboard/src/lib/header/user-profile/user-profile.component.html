@@ -1,11 +1,12 @@
-<!-- TODO: apply style-->
-<div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Profile
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">My Profile</a>
-    <a class="dropdown-item" href="#">Logout</a>
-  </div>
+<div class="btn-group" dropdown>
+  <button id="button-basic" dropdownToggle type="button" class="btn btn-secondary dropdown-toggle"
+          aria-controls="dropdown-basic">
+    <span class="caret"></span>
+  </button>
+  <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu dropdown-menu-right"
+      role="menu" aria-labelledby="button-basic">
+    <li role="menuitem"><a class="dropdown-item" href="#">My Profile</a></li>
+    <li class="divider dropdown-divider"></li>
+    <li role="menuitem"><a class="dropdown-item" href="#">Logout</a></li>
+  </ul>
 </div>

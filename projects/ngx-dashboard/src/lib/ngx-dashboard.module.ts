@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { HeaderComponent } from './header/header.component';
 import { HeaderLogoComponent } from './header/header-logo/header-logo.component';
@@ -25,7 +26,8 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    BsDropdownModule.forRoot()
   ],
   exports: [
     FooterComponent,

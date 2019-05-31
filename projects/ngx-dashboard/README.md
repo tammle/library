@@ -1,24 +1,84 @@
 # NgxDashboard
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+## Installation instructions
+Install from NPM:
+`npm install ngx-dashboard-tammle --save`
 
-## Code scaffolding
+## Usage
+`import { NgxDashboardModule } from 'ngx-dashboard-tammle';`
 
-Run `ng generate component component-name --project NgxDashboard` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project NgxDashboard`.
-> Note: Don't forget to add `--project NgxDashboard` or else it will be added to the default project in your `angular.json` file. 
+```javascript
+@NgModule({
+  imports: [
+    NgxDashboardModule
+  ],
+  ...
+})
+export class AppModule { }
+```
 
-## Build
+### Provided Components
+`<dashboard-header></dashboard-header>`
 
-Run `ng build NgxDashboard` to build the project. The build artifacts will be stored in the `dist/` directory.
+This will show your template content that passed within the opening & closing tags. E.g:
 
-## Publishing
+```html
+  <dashboard-header>
+    <p>Your content here!</p>  
+  </dashboard-header>
+```
+Pre-made components that could compose with `<dashboard-header>`, use it, at your convenience, or build your own templates:
+```html
+<dashboard-header>
+  <!-- @Input title: string 
+       @Input imgUrl: string -->
+  <header-logo
+        [title]="'Home'"
+        [imgUrl]="'Your Url Here'">
+  </header-logo>
+  
+  <!-- @Input title: string 
+       @Input profileLink: string
+       @Input avatarUrl: string -->
+  <user-avatar
+        [title]="'User Avatar'"
+        [profileLink]="'/'"
+        [avatarUrl]="'/'"
+      >
+      </user-avatar>
+  
+  <!--Dropdown menu-->
+  <user-profile></user-profile>
+</dashboard-header>
+```
 
-After building your library with `ng build NgxDashboard`, go to the dist folder `cd dist/ngx-dashboard` and run `npm publish`.
+`<dashboard-sidebar></dashboard-sidebar>`
 
-## Running unit tests
+Comes with default template. You can also customize the template if needed. E.g:
+```html
+<dashboard-sidebar [sidebarTemplate]="customSidebar"></dashboard-sidebar>
+    <ng-template #customSidebar>
+      Customized template here!
+    </ng-template>
+```
 
-Run `ng test NgxDashboard` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`<dashboard-footer></dashboard-footer>` - Static content, non-configurable.
 
-## Further help
+`<dashboard-login></dashboard-login>`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Callback `loginSubmitted` provided with `User` model as argument, use this to handle business on form submitted.E.g: 
+
+```html
+<dashboard-login (loginSubmitted)="showProfilePopup($event)"></dashboard-login>
+```
+
+### Build
+The src files for the library lives under projects/ngx-dashboard/src/lib directory. 
+
+`ng build NgxDashboard`
+
+### Publish
+Change your terminal working directory to /dist/ngx-dashboard. Then run:
+
+`npm publish`
+
