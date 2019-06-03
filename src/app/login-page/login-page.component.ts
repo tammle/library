@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 import { ProfileDialogComponent } from '../profile-dialog/profile-dialog.component';
-
 import { User } from '../models/user.model';
+import { SessionService } from '../services/session.service';
 
 @Component({
   selector: 'login-page',
@@ -13,7 +13,7 @@ export class LoginPageComponent {
   modalRef: BsModalRef;
   user = new User();
 
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService, private session: SessionService) {}
 
   showProfilePopup(user: User) {
     const initialState = {
@@ -24,5 +24,6 @@ export class LoginPageComponent {
     };
 
     this.modalRef = this.modalService.show(ProfileDialogComponent, { initialState });
+    this.session.setUser(user);
   }
 }
