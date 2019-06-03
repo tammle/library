@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from "@angular/router"
+import { Router } from '@angular/router';
 import {  BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
@@ -30,7 +30,7 @@ export class ProfileDialogComponent {
   constructor(public bsModalRef: BsModalRef, private router: Router) {}
 
   transitionToDashboard() {
-    this.router.navigate(['/dashboard'])
+    this.router.navigate(['/dashboard']);
     this.bsModalRef.hide();
   }
 }

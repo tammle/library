@@ -9,10 +9,10 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ProfileDialogComponent } from './profile-dialog/profile-dialog.component';
 import { PageNotFoundComponent} from './page-not-found/page-not-found.component';
-import { MainPageComponent } from './main-page/main-page.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes: Routes = [
-  { path: 'dashboard', component: MainPageComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: LoginPageComponent },
   { path: '',   redirectTo: '/dashboard', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
@@ -24,7 +24,7 @@ const appRoutes: Routes = [
     ProfileDialogComponent,
     LoginPageComponent,
     PageNotFoundComponent,
-    MainPageComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

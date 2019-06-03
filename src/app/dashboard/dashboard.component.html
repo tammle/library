@@ -1,4 +1,4 @@
-<dashboard-header>
+<dashboard-header class="d-flex flex-column">
   <nav class="navbar navbar-expand-lg">
     <header-logo
       [title]="'Home'"
@@ -30,11 +30,9 @@
     </user-avatar>
     <user-profile></user-profile>
   </nav>
-
-  <!--<header-menu></header-menu>-->
 </dashboard-header>
 
-<div class="dashboard-content vh-100 container-fluid">
+<div class="dashboard-content container-fluid">
   <div class="row">
     <!-- Default sidebar-->
     <dashboard-sidebar class="sidebar default-sidebar col-2 "></dashboard-sidebar>
@@ -57,7 +55,7 @@
   </div>
 </div>
 
-<dashboard-footer>
+<dashboard-footer class="d-flex flex-column">
   Static content! Therefore, this text won't be shown!
 </dashboard-footer>
 

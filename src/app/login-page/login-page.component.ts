@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-import { ProfileDialogComponent } from "../profile-dialog/profile-dialog.component";
+import { ProfileDialogComponent } from '../profile-dialog/profile-dialog.component';
 
 @Component({
   selector: 'login-page',
