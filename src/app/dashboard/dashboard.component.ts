@@ -10,7 +10,7 @@ export class DashboardComponent {
   username: string;
 
   constructor(session: SessionService) {
-    this.username = session.getUsername()
+    this.username = session.getUser().name;
   }
 
   onItemClicked() {

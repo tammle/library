@@ -7,11 +7,16 @@ import { User } from '../models/user.model';
 export class SessionService {
   user: User;
 
+  constructor() {
+    this.user = new User();
+  }
+
+
   setUser(user: User) {
     this.user = user;
   }
 
-  getUsername() {
-    return this.user.name;
+  getUser() {
+    return this.user;
   }
 }

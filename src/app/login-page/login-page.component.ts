@@ -11,9 +11,11 @@ import { SessionService } from '../services/session.service';
 })
 export class LoginPageComponent {
   modalRef: BsModalRef;
-  user = new User();
+  user: User;
 
-  constructor(private modalService: BsModalService, private session: SessionService) {}
+  constructor(private modalService: BsModalService, private session: SessionService) {
+    this.user = session.getUser();
+  }
 
   showProfilePopup(user: User) {
     const initialState = {
