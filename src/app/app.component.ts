@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Dashboard Library';
-
-  onItemClicked() {
-    window.alert('Item clicked');
-  }
 }

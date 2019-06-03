@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from "@angular/router"
 import {  BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
@@ -16,6 +17,7 @@ import {  BsModalRef } from 'ngx-bootstrap/modal';
       <strong>Password:</strong> {{password}}
     </div>
     <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="transitionToDashboard()">Go to Dashboard</button>
       <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
     </div>
   `
@@ -25,5 +27,10 @@ export class ProfileDialogComponent {
   username: string;
   password: string;
 
-  constructor(public bsModalRef: BsModalRef) {}
+  constructor(public bsModalRef: BsModalRef, private router: Router) {}
+
+  transitionToDashboard() {
+    this.router.navigate(['/dashboard'])
+    this.bsModalRef.hide();
+  }
 }

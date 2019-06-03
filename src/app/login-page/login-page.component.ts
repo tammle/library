@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from "@angular/router"
 
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ProfileDialogComponent } from "../profile-dialog/profile-dialog.component";
@@ -11,7 +10,7 @@ import { ProfileDialogComponent } from "../profile-dialog/profile-dialog.compone
 export class LoginPageComponent {
   modalRef: BsModalRef;
 
-  constructor(private modalService: BsModalService, private router: Router) {}
+  constructor(private modalService: BsModalService) {}
 
   showProfilePopup(user) {
     const initialState = {
@@ -22,6 +21,5 @@ export class LoginPageComponent {
     };
 
     this.modalRef = this.modalService.show(ProfileDialogComponent, { initialState });
-    this.router.navigate(['/dashboard'])
   }
 }
