@@ -9,6 +9,12 @@
   .nav-link {
     color: #fff;
   }
+
+  user-avatar {
+    .nav-link {
+      padding: 0;
+    }
+  }
 }
 
 .sidebar {
